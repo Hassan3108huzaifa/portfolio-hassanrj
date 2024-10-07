@@ -5,7 +5,6 @@ import Image from 'next/image'
 import './Header.css'
 import Button from './ui/LinkedInButton'
 
-
 const jobTitles = [
   'Front-End Developer',
   'UI/UX Designer',
@@ -43,7 +42,6 @@ export default function Navbar() {
         if (currentTitle.length > 0) {
           setCurrentTitle(currentTitle.slice(0, -1))
         } else {
-          // Once fully deleted, move to the next title
           const nextIndex = (currentIndex + 1) % jobTitles.length
           setCurrentIndex(nextIndex)
           setIsTyping(true)
@@ -54,7 +52,6 @@ export default function Navbar() {
     const typingInterval = setInterval(typeTitle, 100)
     return () => clearInterval(typingInterval)
   }, [currentTitle, currentIndex, isTyping])
-
 
   return (
     <div className='relative min-h-screen overflow-hidden'>

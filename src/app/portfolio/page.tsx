@@ -17,7 +17,6 @@ const portfolioItems = [
 ]
 
 const Portfolio = () => {
-
   const [filter, setFilter] = useState('all')
   const [filteredItems, setFilteredItems] = useState(portfolioItems)
   const [animate, setAnimate] = useState(false)
